@@ -15,6 +15,8 @@
 		011E1D1322D0F68E007E2609 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011E1D1122D0F68E007E2609 /* LaunchScreen.storyboard */; };
 		011E1D2022D10419007E2609 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011E1D1E22D10419007E2609 /* TaskCell.swift */; };
 		011E1D2122D10419007E2609 /* TaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011E1D1F22D10419007E2609 /* TaskCell.xib */; };
+		011E1D2522D10A63007E2609 /* NewTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011E1D2422D10A63007E2609 /* NewTaskController.swift */; };
+		011E1D2722D1257B007E2609 /* ToDoTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011E1D2622D1257B007E2609 /* ToDoTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		011E1D1422D0F68E007E2609 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		011E1D1E22D10419007E2609 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		011E1D1F22D10419007E2609 /* TaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCell.xib; sourceTree = "<group>"; };
+		011E1D2422D10A63007E2609 /* NewTaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskController.swift; sourceTree = "<group>"; };
+		011E1D2622D1257B007E2609 /* ToDoTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 		011E1D1A22D10100007E2609 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				011E1D2622D1257B007E2609 /* ToDoTask.swift */,
 				011E1D0C22D0F68C007E2609 /* _Do.xcdatamodeld */,
 			);
 			path = Model;
@@ -91,6 +96,7 @@
 			children = (
 				011E1D0722D0F68C007E2609 /* ViewController.swift */,
 				011E1D1E22D10419007E2609 /* TaskCell.swift */,
+				011E1D2422D10A63007E2609 /* NewTaskController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -180,6 +186,8 @@
 				011E1D2022D10419007E2609 /* TaskCell.swift in Sources */,
 				011E1D0822D0F68C007E2609 /* ViewController.swift in Sources */,
 				011E1D0E22D0F68C007E2609 /* _Do.xcdatamodeld in Sources */,
+				011E1D2522D10A63007E2609 /* NewTaskController.swift in Sources */,
+				011E1D2722D1257B007E2609 /* ToDoTask.swift in Sources */,
 				011E1D0622D0F68C007E2609 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

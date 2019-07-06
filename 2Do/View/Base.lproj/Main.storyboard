@@ -54,6 +54,10 @@
                                 <state key="normal" title="+">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addNewTask:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bN3-0v-wdx"/>
+                                    <segue destination="J9J-JO-wT6" kind="show" id="8xM-Ds-ihn"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.96862745098039216" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -70,13 +74,60 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fFm-Vx-o21"/>
                     <connections>
                         <outlet property="tableView" destination="3iU-no-2wF" id="ouD-kO-cTX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.40000000000001" y="137.18140929535232"/>
+            <point key="canvasLocation" x="1077.5999999999999" y="137.18140929535232"/>
+        </scene>
+        <!--New Task Controller-->
+        <scene sceneID="Bf1-oq-IzH">
+            <objects>
+                <viewController restorationIdentifier="newTaskVC" storyboardIdentifier="newTaskVC" id="J9J-JO-wT6" customClass="NewTaskController" customModule="_Do" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="118-tM-Axo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLg-sG-ClH">
+                                <rect key="frame" x="32" y="56" width="62" height="32"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelPressed:" destination="J9J-JO-wT6" eventType="touchUpInside" id="R9y-8k-VUO"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Define your task" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b0R-1G-Zv4">
+                                <rect key="frame" x="32" y="241" width="311" height="26"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="enterPressed:" destination="J9J-JO-wT6" eventType="primaryActionTriggered" id="2Ra-QG-t9w"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96862745098039216" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="b0R-1G-Zv4" firstAttribute="leading" secondItem="qs9-gx-QsA" secondAttribute="leading" constant="32" id="3vm-pw-Uy4"/>
+                            <constraint firstItem="qs9-gx-QsA" firstAttribute="trailing" secondItem="b0R-1G-Zv4" secondAttribute="trailing" constant="32" id="Ci5-lL-PAV"/>
+                            <constraint firstItem="WLg-sG-ClH" firstAttribute="top" secondItem="qs9-gx-QsA" secondAttribute="top" constant="36" id="Gjn-NF-9KK"/>
+                            <constraint firstItem="WLg-sG-ClH" firstAttribute="leading" secondItem="qs9-gx-QsA" secondAttribute="leading" constant="32" id="kvm-9V-Mwl"/>
+                            <constraint firstItem="qs9-gx-QsA" firstAttribute="bottom" secondItem="b0R-1G-Zv4" secondAttribute="bottom" constant="400" id="nlu-0W-zyU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qs9-gx-QsA"/>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="b0R-1G-Zv4" id="Jhh-F9-jLY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GOh-1J-mqu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1844" y="136.28185907046478"/>
         </scene>
     </scenes>
 </document>

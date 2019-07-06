@@ -21,7 +21,32 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qU6-7t-FHj">
                         <rect key="frame" x="32" y="6" width="256" height="67.5"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x08-PR-i56">
+                                <rect key="frame" x="16" y="19" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="gQd-KJ-ODa"/>
+                                    <constraint firstAttribute="height" constant="30" id="x57-eb-R1M"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="checkBoxPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="W2f-Tx-tiy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Bl-sb-yF3">
+                                <rect key="frame" x="54" y="24" width="186" height="20"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3Bl-sb-yF3" firstAttribute="leading" secondItem="x08-PR-i56" secondAttribute="trailing" constant="8" id="7Mu-56-RN7"/>
+                            <constraint firstItem="x08-PR-i56" firstAttribute="centerY" secondItem="qU6-7t-FHj" secondAttribute="centerY" id="HmA-uK-AGk"/>
+                            <constraint firstAttribute="trailing" secondItem="3Bl-sb-yF3" secondAttribute="trailing" constant="16" id="IoF-TT-TP8"/>
+                            <constraint firstItem="3Bl-sb-yF3" firstAttribute="centerY" secondItem="qU6-7t-FHj" secondAttribute="centerY" id="UEQ-eM-qDv"/>
+                            <constraint firstItem="x08-PR-i56" firstAttribute="leading" secondItem="qU6-7t-FHj" secondAttribute="leading" constant="16" id="hKg-xb-rBa"/>
+                        </constraints>
                     </view>
                 </subviews>
                 <color key="backgroundColor" red="0.96078431372549022" green="0.96862745098039216" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -33,7 +58,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="137.68115942028987" y="148.32589285714286"/>
+            <connections>
+                <outlet property="checkBox" destination="x08-PR-i56" id="pYk-IR-NDw"/>
+                <outlet property="label" destination="3Bl-sb-yF3" id="0WA-RI-TjS"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="147.99107142857142"/>
         </tableViewCell>
     </objects>
 </document>
