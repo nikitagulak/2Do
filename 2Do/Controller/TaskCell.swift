@@ -12,6 +12,8 @@ var foo = 2
 
 class TaskCell: UITableViewCell {
 
+    // MARK: - Lifecycle
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         checkBox.layer.borderWidth = 1
@@ -21,16 +23,19 @@ class TaskCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
+    
+    
+    // MARK: - IBOutlets
     
     @IBOutlet weak var checkBox: UIButton!
     
     @IBOutlet weak var label: UILabel!
     
+    
+    // MARK: - IBActions
+    
     @IBAction func checkBoxPressed(_ sender: UIButton) {
-        print(sender.tag)
         mainVC?.deleteTask(tag: sender.tag)
     }
     

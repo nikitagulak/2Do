@@ -17,6 +17,7 @@
 		011E1D2122D10419007E2609 /* TaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011E1D1F22D10419007E2609 /* TaskCell.xib */; };
 		011E1D2522D10A63007E2609 /* NewTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011E1D2422D10A63007E2609 /* NewTaskController.swift */; };
 		011E1D2722D1257B007E2609 /* ToDoTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011E1D2622D1257B007E2609 /* ToDoTask.swift */; };
+		01BCB1AB22D1F46A00F10A58 /* EditTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BCB1AA22D1F46A00F10A58 /* EditTaskController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		011E1D1F22D10419007E2609 /* TaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCell.xib; sourceTree = "<group>"; };
 		011E1D2422D10A63007E2609 /* NewTaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskController.swift; sourceTree = "<group>"; };
 		011E1D2622D1257B007E2609 /* ToDoTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTask.swift; sourceTree = "<group>"; };
+		01BCB1AA22D1F46A00F10A58 /* EditTaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				011E1D0722D0F68C007E2609 /* ViewController.swift */,
+				01BCB1AA22D1F46A00F10A58 /* EditTaskController.swift */,
 				011E1D1E22D10419007E2609 /* TaskCell.swift */,
 				011E1D2422D10A63007E2609 /* NewTaskController.swift */,
 			);
@@ -186,6 +189,7 @@
 				011E1D2022D10419007E2609 /* TaskCell.swift in Sources */,
 				011E1D0822D0F68C007E2609 /* ViewController.swift in Sources */,
 				011E1D0E22D0F68C007E2609 /* _Do.xcdatamodeld in Sources */,
+				01BCB1AB22D1F46A00F10A58 /* EditTaskController.swift in Sources */,
 				011E1D2522D10A63007E2609 /* NewTaskController.swift in Sources */,
 				011E1D2722D1257B007E2609 /* ToDoTask.swift in Sources */,
 				011E1D0622D0F68C007E2609 /* AppDelegate.swift in Sources */,

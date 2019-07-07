@@ -21,6 +21,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         fetchTasks()
         tableView.register(UINib(nibName: "TaskCell", bundle: nil), forCellReuseIdentifier: "taskCell")
         tableView.backgroundColor = #colorLiteral(red: 0.9607843137, green: 0.968627451, blue: 0.9764705882, alpha: 1)
+        defineAddTaskButtonStyle()
+//        tableView.rowHeight = UITableView.automaticDimension
+//        tableView.estimatedRowHeight = 600
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,18 +34,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // MARK: - IBOutlets
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addTaskButton: UIButton!
+    
     
     // MARK: - Public Properties
     
     var myTasks: [ToDoTask] = []
-    
-    
-    // MARK: - IBActions
-    
-    @IBAction func addNewTask(_ sender: UIButton) {
-//        let newTaskVC = storyboard!.instantiateViewController(withIdentifier: "newTaskVC") as! NewTaskController
-//        navigationController?.pushViewController(newTaskVC, animated: true)
-    }
     
     
     //MARK: TableView DataSource Methods
@@ -62,7 +59,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     //MARK: TableView Delegate Methods
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        selectedCellNumber = indexPath.row
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "editTaskVC")
+        self.present(controller, animated: true, completion: nil)
     }
     
     
@@ -107,6 +107,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         } catch {
             print(error)
         }
+    }
+    
+    func defineAddTaskButtonStyle() {
+        addTaskButton.layer.shadowColor = #colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 1)
+        addTaskButton.layer.shadowRadius = 10
+        addTaskButton.layer.shadowOpacity = 0.4
+        addTaskButton.layer.shadowOffset = CGSize(width: 0, height: 10)
     }
     
 }

@@ -13,28 +13,16 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_Do" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="_Do" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="140" translatesAutoresizingMaskIntoConstraints="NO" id="tqf-ty-b2O">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tasks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3B-UB-S8c">
                                 <rect key="frame" x="32" y="52" width="311" height="37.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tasks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3B-UB-S8c">
-                                        <rect key="frame" x="0.0" y="0.0" width="96.5" height="37.5"/>
-                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="32"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAU-wB-Uft">
-                                        <rect key="frame" x="236.5" y="0.0" width="74.5" height="37.5"/>
-                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
-                                        <state key="normal" title="History">
-                                            <color key="titleColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="32"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3iU-no-2wF">
                                 <rect key="frame" x="0.0" y="121.5" width="375" height="545.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -55,27 +43,28 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="addNewTask:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bN3-0v-wdx"/>
                                     <segue destination="J9J-JO-wT6" kind="show" id="8xM-Ds-ihn"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.96862745098039216" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tqf-ty-b2O" secondAttribute="trailing" constant="32" id="7S7-M5-yUa"/>
-                            <constraint firstItem="tqf-ty-b2O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="9yw-Ts-0rx"/>
+                            <constraint firstItem="3iU-no-2wF" firstAttribute="top" secondItem="k3B-UB-S8c" secondAttribute="bottom" constant="32" id="4bS-0g-2FV"/>
                             <constraint firstItem="3iU-no-2wF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="G6D-ia-klv"/>
+                            <constraint firstItem="k3B-UB-S8c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="MYa-Db-N0u"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k3B-UB-S8c" secondAttribute="trailing" constant="32" id="Pa0-aY-KNN"/>
                             <constraint firstItem="3iU-no-2wF" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="WIa-LD-UHk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i61-U4-TR2" secondAttribute="trailing" constant="32" id="YLI-pO-8KM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="i61-U4-TR2" secondAttribute="bottom" constant="32" id="ZB5-gj-X1b"/>
-                            <constraint firstItem="tqf-ty-b2O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="iEz-Te-011"/>
+                            <constraint firstItem="k3B-UB-S8c" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="ute-gK-YMj"/>
                             <constraint firstItem="3iU-no-2wF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vKc-pC-cld"/>
-                            <constraint firstItem="3iU-no-2wF" firstAttribute="top" secondItem="tqf-ty-b2O" secondAttribute="bottom" constant="32" id="vOG-k9-yFh"/>
+                            <constraint firstItem="3iU-no-2wF" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="xCd-pM-TgL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="fFm-Vx-o21"/>
                     <connections>
+                        <outlet property="addTaskButton" destination="i61-U4-TR2" id="fYP-03-ohL"/>
                         <outlet property="tableView" destination="3iU-no-2wF" id="ouD-kO-cTX"/>
                     </connections>
                 </viewController>
@@ -105,7 +94,7 @@
                                 <rect key="frame" x="32" y="241" width="311" height="26"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                 <connections>
                                     <action selector="enterPressed:" destination="J9J-JO-wT6" eventType="primaryActionTriggered" id="2Ra-QG-t9w"/>
                                 </connections>
@@ -128,6 +117,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GOh-1J-mqu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1844" y="136.28185907046478"/>
+        </scene>
+        <!--Edit Task Controller-->
+        <scene sceneID="Reb-3P-iFU">
+            <objects>
+                <viewController storyboardIdentifier="editTaskVC" id="faW-Bc-BUI" customClass="EditTaskController" customModule="_Do" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MVD-iI-ZGg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRU-sm-xiY">
+                                <rect key="frame" x="32" y="56" width="62" height="32"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelPressed:" destination="faW-Bc-BUI" eventType="touchUpInside" id="HEa-wf-DUz"/>
+                                    <action selector="cancelPressed:" destination="J9J-JO-wT6" eventType="touchUpInside" id="Ko2-b5-SIC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKI-Sn-Pqc">
+                                <rect key="frame" x="302" y="56" width="41" height="32"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="17"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelPressed:" destination="J9J-JO-wT6" eventType="touchUpInside" id="OEv-hC-StP"/>
+                                    <action selector="savePressed:" destination="faW-Bc-BUI" eventType="touchUpInside" id="6yR-iT-IcA"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Define your task" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GcQ-st-XSH">
+                                <rect key="frame" x="32" y="241" width="311" height="26"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="enterPressed:" destination="faW-Bc-BUI" eventType="primaryActionTriggered" id="fKm-XT-mrv"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96862745098039216" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CKI-Sn-Pqc" firstAttribute="top" secondItem="0aT-7t-0FB" secondAttribute="top" constant="36" id="GVC-bu-HJ4"/>
+                            <constraint firstItem="GcQ-st-XSH" firstAttribute="leading" secondItem="0aT-7t-0FB" secondAttribute="leading" constant="32" id="Kwb-5Q-bdh"/>
+                            <constraint firstItem="0aT-7t-0FB" firstAttribute="trailing" secondItem="CKI-Sn-Pqc" secondAttribute="trailing" constant="32" id="PWz-Hn-RJb"/>
+                            <constraint firstItem="0aT-7t-0FB" firstAttribute="trailing" secondItem="GcQ-st-XSH" secondAttribute="trailing" constant="32" id="TCg-98-i6I"/>
+                            <constraint firstItem="tRU-sm-xiY" firstAttribute="leading" secondItem="0aT-7t-0FB" secondAttribute="leading" constant="32" id="eKp-4f-f7z"/>
+                            <constraint firstItem="0aT-7t-0FB" firstAttribute="bottom" secondItem="GcQ-st-XSH" secondAttribute="bottom" constant="400" id="fR3-gp-XH4"/>
+                            <constraint firstItem="tRU-sm-xiY" firstAttribute="top" secondItem="0aT-7t-0FB" secondAttribute="top" constant="36" id="tHh-Yi-50Q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0aT-7t-0FB"/>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="GcQ-st-XSH" id="Goo-Gr-oBq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m2F-2M-DXZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2617" y="136"/>
         </scene>
     </scenes>
 </document>
