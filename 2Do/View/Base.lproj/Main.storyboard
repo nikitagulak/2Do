@@ -102,6 +102,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.96862745098039216" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="qs9-gx-QsA" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WLg-sG-ClH" secondAttribute="trailing" symbolic="YES" id="0jS-nF-5mb"/>
                             <constraint firstItem="b0R-1G-Zv4" firstAttribute="leading" secondItem="qs9-gx-QsA" secondAttribute="leading" constant="32" id="3vm-pw-Uy4"/>
                             <constraint firstItem="qs9-gx-QsA" firstAttribute="trailing" secondItem="b0R-1G-Zv4" secondAttribute="trailing" constant="32" id="Ci5-lL-PAV"/>
                             <constraint firstItem="WLg-sG-ClH" firstAttribute="top" secondItem="qs9-gx-QsA" secondAttribute="top" constant="36" id="Gjn-NF-9KK"/>
@@ -162,6 +163,7 @@
                         <constraints>
                             <constraint firstItem="CKI-Sn-Pqc" firstAttribute="top" secondItem="0aT-7t-0FB" secondAttribute="top" constant="36" id="GVC-bu-HJ4"/>
                             <constraint firstItem="GcQ-st-XSH" firstAttribute="leading" secondItem="0aT-7t-0FB" secondAttribute="leading" constant="32" id="Kwb-5Q-bdh"/>
+                            <constraint firstItem="CKI-Sn-Pqc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tRU-sm-xiY" secondAttribute="trailing" constant="8" symbolic="YES" id="Li7-LB-OhR"/>
                             <constraint firstItem="0aT-7t-0FB" firstAttribute="trailing" secondItem="CKI-Sn-Pqc" secondAttribute="trailing" constant="32" id="PWz-Hn-RJb"/>
                             <constraint firstItem="0aT-7t-0FB" firstAttribute="trailing" secondItem="GcQ-st-XSH" secondAttribute="trailing" constant="32" id="TCg-98-i6I"/>
                             <constraint firstItem="tRU-sm-xiY" firstAttribute="leading" secondItem="0aT-7t-0FB" secondAttribute="leading" constant="32" id="eKp-4f-f7z"/>

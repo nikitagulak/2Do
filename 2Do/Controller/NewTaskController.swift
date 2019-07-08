@@ -25,13 +25,14 @@ class NewTaskController: UIViewController, UITextFieldDelegate {
     // MARK: - IBActions
     
     @IBAction func enterPressed(_ sender: UITextField) {
-        print(textField.text!)
-        saveNewData()
+        if textField.text != "" {
+            saveNewData()
+        }
+        
     }
     
     @IBAction func cancelPressed(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
-        
     }
     
     // MARK: - CoreData Saving

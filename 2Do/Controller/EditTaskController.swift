@@ -37,13 +37,17 @@ class EditTaskController: UIViewController {
     }
     
     @IBAction func savePressed(_ sender: UIButton) {
-        updateTask()
-        self.dismiss(animated: true, completion: nil)
+        if textField.text != "" {
+            updateTask()
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     @IBAction func enterPressed(_ sender: UITextField) {
-        updateTask()
-        self.dismiss(animated: true, completion: nil)
+        if textField.text != "" {
+            updateTask()
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     
